@@ -1,0 +1,23 @@
+{
+  "name": "anesthesia-vr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrotta69/anesthesia-vr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larrotta69/anesthesia-vr/issues"
+  },
+  "homepage": "https://github.com/larrotta69/anesthesia-vr#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

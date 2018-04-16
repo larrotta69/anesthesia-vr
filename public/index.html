@@ -1,16 +1,28 @@
 <html lang="en">
-    <head>
-        <title>Anesthesia Augmented Reality</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/assets/styles.css" />
-        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    </head>
-    <body>
-        <div class="eventio--app" id="app">
-            Anesthesia Augmented Reality
-        </div>
-        <script type="text/javascript" src="/assets/main.js" charset="utf-8"></script>
-    </body>
+<head>
+    <title>Anesthesia Augmented Reality</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <div class="eventio--app" id="app">
+        Anesthesia Augmented Reality
+    </div>
+    <a-scene embedded artoolkit="sourceType: webcam;">
+        <!-- ASSETS -->
+        <a-assets>
+            <a-asset-item id="obj" src="http://localhost:5000/assets/models/skull_basemesh/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <!-- OBJS / COMPONENTS -->
+        <a-obj-model src="#obj" position="0 0.5 0" scale="0.001 0.001 0.001" material="color: salmon"></a-obj-model>
+        <a-marker-camera preset='hiro'></a-marker-camera>
+    </a-scene>
+    <script type="text/javascript" src="/assets/main.js" charset="utf-8"></script>
+</body>
 </html>

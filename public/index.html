@@ -1,28 +1,21 @@
-<html lang="en">
-<head>
-    <title>Anesthesia Augmented Reality</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-</head>
-<body>
-    <div class="eventio--app" id="app">
-        Anesthesia Augmented Reality
-    </div>
-    <a-scene embedded artoolkit="sourceType: webcam;">
-        <!-- ASSETS -->
-        <a-assets>
-            <a-asset-item id="obj" src="http://localhost:5000/assets/models/skull_basemesh/scene.gltf"></a-asset-item>
-        </a-assets>
 
-        <!-- OBJS / COMPONENTS -->
-        <a-obj-model src="#obj" position="0 0.5 0" scale="0.001 0.001 0.001" material="color: salmon"></a-obj-model>
-        <a-marker-camera preset='hiro'></a-marker-camera>
-    </a-scene>
-    <script type="text/javascript" src="/assets/main.js" charset="utf-8"></script>
-</body>
+<html>
+    <head>
+        <script src="./assets/aframe.min.js"></script>
+        <script src="./assets/aframe-environment-component.min.js"></script>
+
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="boxTexture" src="./assets/img/texture1.jpg">
+                <img id="skyTexture" src="./assets/img/back2.jpg">
+            </a-assets>
+            <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+            <a-sky src="#skyTexture"></a-sky>
+
+            <a-light type="ambient" color="#445451"></a-light>
+            <a-light type="point" intensity="2" position="2 4 4"></a-light>
+        </a-scene>
+    </body>
 </html>
